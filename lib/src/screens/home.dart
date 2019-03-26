@@ -21,6 +21,14 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
       duration: Duration(seconds: 2),
       vsync: this,
     );
+
+    //initialize catAnimation with a Tween animation from 0 pixels to 100 pixels
+    catAnimation = Tween(begin: 0.0, end: 100.0).animate(
+      CurvedAnimation(
+        parent: catController,
+        curve: Curves.easeIn,
+      ),
+    );
   }
 
   Widget build(context) {
