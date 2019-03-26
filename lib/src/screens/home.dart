@@ -14,5 +14,10 @@ class HomeState extends State<Home> {
     );
   }
 
-  Widget buildAnimation() {}
+  Widget buildAnimation() {
+    return Text(
+      'Animation!',
+      textAlign: TextAlign.center,
+    );
+  }
 }
