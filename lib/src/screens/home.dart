@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/cat.dart';
 
 class Home extends StatefulWidget {
   HomeState createState() => HomeState();
@@ -15,9 +16,6 @@ class HomeState extends State<Home> {
   }
 
   Widget buildAnimation() {
-    return Text(
-      'Animation!',
-      textAlign: TextAlign.center,
-    );
+    return Cat();
   }
 }
