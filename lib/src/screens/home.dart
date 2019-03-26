@@ -29,6 +29,9 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
         curve: Curves.easeIn,
       ),
     );
+
+    //start animation
+    catController.forward();
   }
 
   Widget build(context) {
