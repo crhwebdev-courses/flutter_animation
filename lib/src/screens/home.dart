@@ -6,6 +6,15 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
+  Animation<double> catAnimation;
+  AnimationController catController;
+
+  //lifecycle method
+  initState() {
+    //call super class initState method
+    super.initState();
+  }
+
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
