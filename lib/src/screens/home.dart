@@ -23,7 +23,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
     );
 
     //initialize catAnimation with a Tween animation from 0 pixels to 100 pixels
-    catAnimation = Tween(begin: -50.0, end: -90.0).animate(
+    catAnimation = Tween(begin: -35.0, end: -80.0).animate(
       CurvedAnimation(
         parent: catController,
         curve: Curves.easeIn,
