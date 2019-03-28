@@ -18,7 +18,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
 
     //initialize catController - this controlls the animation timing
     catController = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(milliseconds: 200),
       vsync: this,
     );
 
