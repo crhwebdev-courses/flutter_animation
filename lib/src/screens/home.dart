@@ -95,7 +95,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
         child: Container(
           height: 10.0,
           width: 125.0,
-          color: Colors.red,
+          color: Colors.brown,
         ),
       ),
     );
