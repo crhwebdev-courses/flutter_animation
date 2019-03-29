@@ -35,7 +35,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
 
     // initialize box animation controler and animation
     boxController = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(milliseconds: 300),
       vsync: this,
     );
 
