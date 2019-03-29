@@ -11,6 +11,8 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> with TickerProviderStateMixin {
   Animation<double> catAnimation;
   AnimationController catController;
+  Animation<double> boxAnimation;
+  AnimationController boxController;
 
   //lifecycle method
   initState() {
@@ -31,7 +33,21 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
       ),
     );
 
-    //start animation
+    // initialize box animation controler and animation
+    boxController = AnimationController(
+      duration: Duration(seconds: 2),
+      vsync: this,
+    );
+
+    boxAnimation = Tween(
+      begin: 0.0,
+      end: 3.14,
+    ).animate(
+      CurvedAnimation(
+        parent: boxController,
+        curve: Curves.linear,
+      ),
+    );
   }
 
   onTap() {
