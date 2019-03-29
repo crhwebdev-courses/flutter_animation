@@ -48,6 +48,13 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
         curve: Curves.linear,
       ),
     );
+
+    boxAnimation.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        boxController.repeat();
+      }
+    });
+    boxController.forward();
   }
 
   onTap() {
@@ -105,15 +112,21 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
   Widget buildLeftFlap() {
     return Positioned(
       left: 3.0,
-      child: Transform.rotate(
-        alignment: Alignment.topLeft,
-        angle: (pi * 0.6),
+      child: AnimatedBuilder(
+        animation: boxAnimation,
         child: Container(
           height: 10.0,
           width: 125.0,
           color: Colors.brown,
         ),
+        builder: (context, child) {
+          return Transform.rotate(
+            child: child,
+            alignment: Alignment.topLeft,
+            angle: boxAnimation.value,
+          );
+        },
       ),
     );
-  }
-}
+  } //end of buildLeftFlap
+} //end of class
